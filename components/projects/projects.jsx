@@ -9,7 +9,7 @@ const projectData = [
     bgColor: "bg-body-tertiary",
     textBg: "text-bg-dark",
     shadow: "shadow-sm",
-    title: "Project 1",
+    title: "Project 1 s",
   },
   {
     bgColor: "bg-body-tertiary",
