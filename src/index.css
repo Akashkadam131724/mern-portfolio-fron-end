@@ -18,6 +18,17 @@
   --piss-yellow: #e6ca2f;
   --light-tan: #fceec3;
   --light-blue: #5dcfea;
+
+  --large-device: 1440px;
+
+  --small-device-min: 1160px;
+  --small-device-max: 1439px;
+
+  --tablet-min: 768px;
+  --tablet-max: 1159px;
+
+  --mobile-min: 360px;
+  --mobile-max: 767px;
 }
 
 p {
@@ -64,5 +75,35 @@ body::before {
 @media (min-width: 1400px) {
   body::before {
     content: "XXL";
+  }
+}
+
+h1 {
+  font-size: 40px;
+  line-height: 50px;
+}
+
+/* Different screen sizes breakpoints */
+@media (min-width: var(--small-device-min)) and (max-width: var(--small-device-max)) {
+  h1 {
+    /* Small device */
+    font-size: 32px;
+    line-height: 42px;
+  }
+}
+
+@media (min-width: var(--tablet-min)) and (max-width: var(--tablet-max)) {
+  h1 {
+    /* Tablet layout */
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+@media (min-width: var(--mobile-min)) and (max-width: var(--mobile-max)) {
+  h1 {
+    /* Mobile layout */
+    font-size: 32px;
+    line-height: 40px;
   }
 }

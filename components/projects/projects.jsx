@@ -40,9 +40,9 @@ const projectData = [
 
 const Projects = () => {
   return (
-    <>
+    <div className="container">
       <main>Projects</main>
-    </>
+    </div>
   );
 };
 
