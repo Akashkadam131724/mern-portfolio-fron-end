@@ -1,6 +1,8 @@
 import "../../src/App.css";
 
 const Banner = () => {
+  const url = import.meta.env.VITE_API_CLIENT_URL;
+
   return (
     <div className="bg-white">
       <div className="container">
@@ -8,8 +10,7 @@ const Banner = () => {
           <div className="col-md-6 col-sm-12">
             <div className="d-flex flex-column justify-content-center align-items-start h-100">
               <h4 className="fw-normal mb-0 banner-sub-title">
-                {" "}
-                Hello, my name is{" "}
+                Hello, my name is
               </h4>
               <h1 className="banner-title">AKASH B. KADAM</h1>
               <h4 className="fw-normal text-muted mb-4 banner-description">
@@ -21,13 +22,13 @@ const Banner = () => {
               <div className="d-flex gap-3 lead fw-normal banner-cta-btn">
                 <button
                   type="button"
-                  className="btn btn-lg btn-outline-secondary"
+                  className="btn btn-sm btn-outline-secondary"
                 >
                   Resume
                 </button>
                 <button
                   type="button"
-                  className="btn btn-lg btn-outline-secondary"
+                  className="btn btn-sm btn-outline-secondary"
                 >
                   GitHub
                 </button>
@@ -36,7 +37,7 @@ const Banner = () => {
           </div>
           <div className="col-md-6 col-sm-12 d-flex align-items-center justify-content-center">
             <img
-              src="/images/portfolio.png"
+              src={`${url}images/portfolio.png`}
               alt="Portfolio"
               className="banner-image img-fluid rounded-circle border rounded-sm-none border-black border-opacity-25 border-3" // Added border classes
               style={{ width: "250px", height: "250px" }} // Increase border width

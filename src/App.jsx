@@ -7,6 +7,7 @@ import Header from "../components/header/header";
 import Banner from "../components/banner/banner";
 import Footer from "../components/footer/footer";
 import Projects from "../components/projects/projects";
+import ContactForm from "../components/contact-form/contact-form";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Header />
       <Banner />
       <Projects />
+      <ContactForm />
       <Footer />
     </>
   );
