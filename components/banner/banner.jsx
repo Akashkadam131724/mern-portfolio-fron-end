@@ -7,7 +7,7 @@ const Banner = () => {
   const url = import.meta.env.VITE_API_CLIENT_URL;
 
   return (
-    <div className="bg-white" id="banner">
+    <div className="bg-white banner" id="banner">
       <div className="container">
         <div className="row flex-md-row flex-sm-row-reverse section section-pad gy-5">
           <div className="col-md-6 col-sm-12">
@@ -22,11 +22,11 @@ const Banner = () => {
               <h1 className="banner-title animate-section-title">
                 <span>AKASH B. KADAM</span>
               </h1>
-              <h4 className="fw-normal text-muted mb-4 banner-description">
+              <h4 className="fw-normal text-muted mb-4 banner-description desc-animate">
                 I'm a full-stack developer specialized in frontend and backend
                 development for scalable web apps. I have made a variety of MERN
                 Stack Applications. Want to know how I may help your project?
-                Check out my projects from my GitHub Profile.
+                Check out my projects from my GitHub Profile. <span></span>
               </h4>
               <div className="d-flex gap-3 lead fw-normal banner-cta-btn">
                 <button
@@ -49,7 +49,13 @@ const Banner = () => {
               src={`${url}images/portfolio.png`}
               alt="Portfolio"
               className="banner-image img-fluid rounded-circle border rounded-sm-none border-black border-opacity-25 border-3" // Added border classes
-              style={{ width: "250px", height: "250px" }} // Increase border width
+              style={{
+                width: "250px",
+                height: "250px",
+                objectFit: "cover", // Ensure the image covers the container
+                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
+                borderRadius: "50%", // Make it a circle
+              }}
             />
           </div>
         </div>
