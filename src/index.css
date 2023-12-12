@@ -107,3 +107,21 @@ h1 {
     line-height: 40px;
   }
 }
+
+.arrow {
+  position: absolute;
+  color: #000000;
+  font-size: 2.5em;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.nextArrow {
+  top: 50%;
+  right: -55px;
+}
+
+.prevArrow {
+  top: 50%;
+  left: -55px;
+}

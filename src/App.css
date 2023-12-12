@@ -66,7 +66,8 @@
 }
 
 .banner-description {
-  animation: fadeIn 2s forwards; /* Use forwards to keep the final state of opacity */
+  animation: fadeIn 2s forwards;
+  font-family: monospace; /* Use forwards to keep the final state of opacity */
 
   @keyframes fadeIn {
     from {
@@ -115,3 +116,81 @@
 /* .hide {
   display: none;
 } */
+
+.card {
+  /* Other styles for your .card class */
+  transition: box-shadow 0.3s ease-in-out;
+}
+
+.card:hover {
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  cursor: pointer;
+  border: 1px solid #a09f9f;
+}
+
+/* Other styles for your .card class */
+
+/* Base */
+
+.animate {
+  color: hsl(0, 0%, 28%);
+  font-family: monospace;
+  letter-spacing: 7px;
+  cursor: pointer;
+}
+
+.animate span {
+  transition: 0.5s ease-out;
+}
+
+.animate:hover span:nth-child(1) {
+  margin-right: 5px;
+}
+
+.animate:hover span:nth-child(1):after {
+  content: "'";
+}
+
+.animate:hover span:nth-child(2) {
+  margin-left: 30px;
+}
+
+.animate:hover span {
+  color: #fff;
+  text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 40px #fff;
+}
+
+.animate-section-title {
+  color: hsl(0, 0%, 28%);
+  font-size: 50px !important;
+  font-weight: bold !important;
+  font-family: monospace;
+  letter-spacing: 7px !important;
+  cursor: pointer;
+  text-transform: uppercase;
+}
+
+.animate-section-title {
+  font-family: monospace;
+  background: linear-gradient(
+    to right,
+    hsl(0, 0%, 30%) 0,
+    hsl(0, 0%, 100%) 10%,
+    hsl(0, 0%, 30%) 20%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 3s infinite linear;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  60% {
+    background-position: 600px;
+  }
+  100% {
+    background-position: 600px;
+  }
+}
