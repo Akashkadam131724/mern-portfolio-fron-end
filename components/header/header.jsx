@@ -27,7 +27,7 @@ const Header = () => {
                   Portfolio
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body className="bg-light">
+              <Offcanvas.Body>
                 <div className="navbar-nav flex-grow-1 justify-content-end">
                   <div className="d-flex flex-xxl-row flex-column align-content-end justify-content-end">
                     <li className="nav-item me-3">
@@ -43,13 +43,10 @@ const Header = () => {
                       </a>
                     </li>
                     <li className="nav-item me-3" href="#projects">
-                      <a
-                        className="nav-link d-flex align-items-center"
-                        href="#"
-                      >
+                      <a className="nav-link" href="#">
                         <button
                           type="button"
-                          className="btn btn-md border  btn-outline-secondary"
+                          className="btn btn-md border btn-outline-secondary"
                         >
                           <GrProjects /> Projects
                         </button>
@@ -59,7 +56,7 @@ const Header = () => {
                       <a className="nav-link" href="#about">
                         <button
                           type="button"
-                          className="btn btn-md border  btn-outline-white"
+                          className="btn btn-md border btn-outline-secondary"
                         >
                           <GrTechnology /> About
                         </button>
