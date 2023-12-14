@@ -44,6 +44,7 @@ body::before {
   position: fixed;
   top: 0;
   right: 0;
+  z-index: 1000;
 }
 
 /* This box class is purely used for explaining how the bootstrap grid system works. */

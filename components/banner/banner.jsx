@@ -9,7 +9,7 @@ const Banner = () => {
   return (
     <div className="bg-white banner" id="banner">
       <div className="container">
-        <div className="row flex-md-row flex-sm-row-reverse section section-pad gy-5">
+        <div className="row flex-md-row flex-column-reverse  section section-pad gy-5">
           <div className="col-md-6 col-sm-12">
             <div className="d-flex flex-column justify-content-center align-items-start h-100">
               <h4 className="fw-normal mb-0 banner-sub-title animate">
@@ -48,14 +48,7 @@ const Banner = () => {
             <img
               src={`${url}images/portfolio.png`}
               alt="Portfolio"
-              className="banner-image img-fluid rounded-circle border rounded-sm-none border-black border-opacity-25 border-3" // Added border classes
-              style={{
-                width: "250px",
-                height: "250px",
-                objectFit: "cover", // Ensure the image covers the container
-                boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", // Add a subtle box shadow
-                borderRadius: "50%", // Make it a circle
-              }}
+              className="banner-image" // Added border classes
             />
           </div>
         </div>

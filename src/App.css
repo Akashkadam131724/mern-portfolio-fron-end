@@ -80,7 +80,12 @@
 }
 
 .banner-image {
-  animation: fadeIn 2s forwards; /* Use forwards to keep the final state of opacity */
+  animation: fadeIn 2s forwards;
+  width: 250px;
+  height: 250px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
 
   @keyframes fadeIn {
     from {
@@ -94,9 +99,9 @@
   }
 
   &:hover {
-    transform: scale(1.1); /* Increase the scale on hover for a nice effect */
+    transform: scale(1.1);
     cursor: pointer;
-    transition: transform 0.3s ease-in-out; /* Add a delay of 0.3s to the scale effect */
+    transition: transform 0.3s ease-in-out;
   }
 }
 
