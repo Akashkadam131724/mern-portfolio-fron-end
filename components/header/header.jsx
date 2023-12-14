@@ -20,13 +20,14 @@ const Header = () => {
               id={`offcanvasNavbar-expand-${expand}`}
               aria-labelledby={`offcanvasNavbarLabel-expand-${expand}`}
               placement="end"
+              style={{ width: "40%" }}
             >
               <Offcanvas.Header closeButton>
                 <Offcanvas.Title id={`offcanvasNavbarLabel-expand-${expand}`}>
                   Portfolio
                 </Offcanvas.Title>
               </Offcanvas.Header>
-              <Offcanvas.Body>
+              <Offcanvas.Body className="bg-light">
                 <div className="navbar-nav flex-grow-1 justify-content-end">
                   <div className="d-flex flex-xxl-row flex-column align-content-end justify-content-end">
                     <li className="nav-item me-3">
