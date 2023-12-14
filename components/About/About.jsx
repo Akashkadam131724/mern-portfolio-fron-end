@@ -1,42 +1,64 @@
-import { useCallback } from "react";
-import ReactFlow, {
-  MiniMap,
-  Controls,
-  Background,
-  useNodesState,
-  useEdgesState,
-  addEdge,
-} from "reactflow";
+const projectData = [
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?web",
+    title: "Card title 1",
+    subtitle: "Subtitle 1",
+    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
 
-const initialNodes = [
-  { id: "1", position: { x: 0, y: 0 }, data: { label: "1" } },
-  { id: "2", position: { x: 0, y: 100 }, data: { label: "2" } },
+    link: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?tech",
+    title: "Card title 2",
+    subtitle: "Subtitle 2",
+    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
+
+    link: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?mob",
+    title: "Card title 3",
+    subtitle: "Subtitle 3",
+    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
+    link: "#",
+  },
+  {
+    imageUrl: "https://source.unsplash.com/1600x900/?game",
+    title: "Card title 3",
+    subtitle: "Subtitle 3",
+    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
+
+    link: "#",
+  },
+  // Add more data as needed
 ];
 
-const initialEdges = [{ id: "e1-2", source: "1", target: "2" }];
-const About = () => {
-  const [nodes, setNodes, onNodesChange] = useNodesState(initialNodes);
-  const [edges, setEdges, onEdgesChange] = useEdgesState(initialEdges);
-
-  const onConnect = useCallback(
-    (params) => setEdges((eds) => addEdge(params, eds)),
-    [setEdges]
-  );
-
+const Card = (props) => {
+  const { imageUrl, title, subtitle, text, link } = props;
   return (
-    <div className="bg-body-primary" id="about">
+    <div className="row my-4  rounded-4 card-hover">
+      <div className="col-3">
+        <img src={imageUrl} className="card-img-top" alt="..." />{" "}
+      </div>
+      <div className="col-9">
+        <div className="card-body">
+          <h5 className="card-title mb-3">{title}</h5>
+          <h6 className="card-subtitle my-2 text-body-secondary">{subtitle}</h6>
+          <p className="card-text">{text}</p>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const About = () => {
+  return (
+    <div id="about" className="bg-body-secondary">
       <div className="container section section-pad">
-        <ReactFlow
-          nodes={nodes}
-          edges={edges}
-          onNodesChange={onNodesChange}
-          onEdgesChange={onEdgesChange}
-          onConnect={onConnect}
-        >
-          <MiniMap />
-          <Controls />
-          <Background />
-        </ReactFlow>
+        <h1 className="section-title text-center">My Experience</h1>
+        {projectData.map((project, index) => (
+          <Card key={index} {...project} />
+        ))}
       </div>
     </div>
   );
