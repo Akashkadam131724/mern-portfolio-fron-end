@@ -1,7 +1,6 @@
-import "../../src/App.css";
 import { FaGithub } from "react-icons/fa";
-import { IoIosDocument } from "react-icons/io";
 import { MdOutlineFileDownload } from "react-icons/md";
+import "../../src/App.css";
 
 const Banner = () => {
   const url = import.meta.env.VITE_API_CLIENT_URL;
@@ -52,6 +51,7 @@ const Banner = () => {
             />
           </div>
         </div>
+        <div className="border w-50 float-start"></div>
       </div>
     </div>
   );

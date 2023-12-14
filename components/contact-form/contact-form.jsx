@@ -8,7 +8,7 @@ const ContactForm = () => {
         <h1 className="section-title text-center">Contact us</h1>
         <div className="row d-flex justify-content-center">
           <div className="col-sm-12 col-md-6">
-            <Form>
+            <Form className="border p-4 rounded-3">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>First name</Form.Label>
                 <Form.Control placeholder="Enter email" />
