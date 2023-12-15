@@ -127,7 +127,7 @@ const Projects = () => {
         <div className="text-center mt-5">
           <button
             type="button"
-            className="btn btn-secondary btn-lg border border-3 rounded rounded-5"
+            className="btn btn-lg border border-2 btn-outline-secondary"
           >
             + View All Projects
           </button>

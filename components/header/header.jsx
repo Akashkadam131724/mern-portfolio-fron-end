@@ -9,6 +9,10 @@ import { SiAboutdotme } from "react-icons/si";
 import { GrTechnology } from "react-icons/gr";
 import { IoMdPerson } from "react-icons/io";
 const Header = () => {
+  const handleNav = (id) => {
+    let getId = document.getElementById(id);
+    getId.scrollIntoView({ behavior: "smooth" });
+  };
   return (
     <>
       {["xxl"].map((expand) => (
@@ -31,7 +35,14 @@ const Header = () => {
                 <div className="navbar-nav flex-grow-1 justify-content-end">
                   <div className="d-flex flex-xxl-row flex-column align-content-end justify-content-end">
                     <li className="nav-item me-3">
-                      <a className="nav-link" href="#banner">
+                      <a
+                        className="nav-link"
+                        href="#banner"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNav("banner");
+                        }}
+                      >
                         <button type="button" className="btn btn-md">
                           <span>
                             <FaHome /> Home
@@ -40,21 +51,42 @@ const Header = () => {
                       </a>
                     </li>
                     <li className="nav-item me-3" href="#projects">
-                      <a className="nav-link" href="#">
+                      <a
+                        className="nav-link"
+                        href="#"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNav("projects");
+                        }}
+                      >
                         <button type="button" className="btn btn-md">
                           <GrProjects /> Projects
                         </button>
                       </a>
                     </li>
                     <li className="nav-item me-3">
-                      <a className="nav-link" href="#about">
+                      <a
+                        className="nav-link"
+                        href="#about"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNav("about");
+                        }}
+                      >
                         <button type="button" className="btn btn-md">
                           <GrTechnology /> About
                         </button>
                       </a>
                     </li>
                     <li className="nav-item me-3">
-                      <a className="nav-link" href="#form">
+                      <a
+                        className="nav-link"
+                        href="#form"
+                        onClick={(e) => {
+                          e.preventDefault();
+                          handleNav("form");
+                        }}
+                      >
                         <button type="button" className="btn btn-md">
                           <IoMdPerson /> Contact
                         </button>
