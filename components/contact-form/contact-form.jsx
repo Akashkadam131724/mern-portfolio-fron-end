@@ -40,7 +40,7 @@ const ContactForm = () => {
               </Form.Group>
 
               <Form.Group className="mb-3">
-                <Form.Label>Password</Form.Label>
+                <Form.Label>Message</Form.Label>
                 <Form.Control type="textarea" placeholder="message" />
               </Form.Group>
 
