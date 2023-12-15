@@ -53,7 +53,7 @@ const Card = (props) => {
 
 const About = () => {
   return (
-    <div id="about" className="bg-body-secondary">
+    <div id="about">
       <div className="container section section-pad">
         <h1 className="section-title text-center">My Experience</h1>
         {projectData.map((project, index) => (

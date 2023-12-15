@@ -3,12 +3,20 @@ import Form from "react-bootstrap/Form";
 
 const ContactForm = () => {
   return (
-    <main id="form">
+    <main id="form" className="bg-body-secondary">
       <div className="container section section-pad">
         <h1 className="section-title text-center">Contact us</h1>
         <div className="row d-flex justify-content-center">
           <div className="col-sm-12 col-md-6">
-            <Form className="border p-4 rounded-3">
+            <img
+              src="https://source.unsplash.com/1600x900/?web"
+              className="img-fluid rounded"
+              alt="Web"
+            />
+          </div>
+
+          <div className="col-sm-12 col-md-6">
+            <Form className="border p-4 rounded-3 bg-light">
               <Form.Group className="mb-3" controlId="formBasicEmail">
                 <Form.Label>First name</Form.Label>
                 <Form.Control placeholder="Enter email" />
@@ -31,9 +39,9 @@ const ContactForm = () => {
                 </Form.Text> */}
               </Form.Group>
 
-              <Form.Group className="mb-3" controlId="formBasicPassword">
+              <Form.Group className="mb-3">
                 <Form.Label>Password</Form.Label>
-                <Form.Control type="password" placeholder="Password" />
+                <Form.Control type="textarea" placeholder="message" />
               </Form.Group>
 
               <Button variant="secondary" type="submit" className="w-100">

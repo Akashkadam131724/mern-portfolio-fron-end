@@ -22,7 +22,7 @@ const Banner = () => {
                 <span>AKASH B. KADAM</span>
               </h1>
               <h4 className="fw-normal text-muted mb-4 banner-description desc-animate">
-                I'm a full-stack developer specialized in frontend and backend
+                I'm a MERN stack developer specialized in frontend and backend
                 development for scalable web apps. I have made a variety of MERN
                 Stack Applications. Want to know how I may help your project?
                 Check out my projects from my GitHub Profile. <span></span>

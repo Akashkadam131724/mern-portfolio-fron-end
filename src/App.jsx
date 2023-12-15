@@ -8,8 +8,8 @@ import Banner from "../components/banner/banner";
 import Footer from "../components/footer/footer";
 import Projects from "../components/projects/projects";
 import ContactForm from "../components/contact-form/contact-form";
-import "reactflow/dist/style.css";
 import About from "../components/About/About";
+import Skills from "../components/skills/skills";
 
 function App() {
   return (
@@ -18,6 +18,7 @@ function App() {
       <Header />
       <Banner />
       <Projects />
+      <Skills />
       <About />
       <ContactForm />
       <Footer />
