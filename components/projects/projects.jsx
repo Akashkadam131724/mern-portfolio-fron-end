@@ -112,7 +112,7 @@ function Arrow(props) {
 
 const Projects = () => {
   return (
-    <div id="project">
+    <div id="projects">
       <div className="container section section-pad">
         <h1 className="section-title text-center">My projects</h1>
         <Slider
