@@ -59,6 +59,7 @@ const Banner = () => {
             return <SkillCard key={indx} skill={item} />;
           })}
         </div>
+        <div className="border w-50 float-start"></div>
       </div>
     </div>
   );
