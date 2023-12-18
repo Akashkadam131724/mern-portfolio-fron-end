@@ -36,7 +36,7 @@ p {
   padding: 0 !important;
 }
 
-body::before {
+/* body::before {
   content: "XS";
   color: red;
   font-size: 2rem;
@@ -45,11 +45,11 @@ body::before {
   top: 0;
   right: 0;
   z-index: 1000;
-}
+} */
 
 /* This box class is purely used for explaining how the bootstrap grid system works. */
 
-@media (min-width: 576px) {
+/* @media (min-width: 576px) {
   body::before {
     content: "SM";
   }
@@ -77,7 +77,7 @@ body::before {
   body::before {
     content: "XXL";
   }
-}
+} */
 
 h1 {
   font-size: 40px;
