@@ -9,16 +9,37 @@ import Footer from "../components/footer/footer";
 import Projects from "../components/projects/projects";
 import ContactForm from "../components/contact-form/contact-form";
 import About from "../components/About/About";
+import { useEffect, useState } from "react";
+import Spinner from "react-bootstrap/esm/Spinner";
 
 function App() {
+  const [showLoader, setShowLoader] = useState(true);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowLoader(false);
+    }, 700);
+
+    return () => clearTimeout(timer); // Clear the timer if the component unmounts
+  }, []);
   return (
     <>
-      <Header />
-      <Banner />
-      <Projects />
-      <About />
-      <ContactForm />
-      <Footer />
+      {showLoader ? (
+        <div className="d-flex align-items-center justify-content-center vh-100">
+          <Spinner animation="border" />
+
+          <div>Loading...</div>
+        </div>
+      ) : (
+        <>
+          <Header />
+          <Banner />
+          <Projects />
+          <About />
+          <ContactForm />
+          <Footer />
+        </>
+      )}
     </>
   );
 }

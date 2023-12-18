@@ -52,7 +52,7 @@ const Banner = () => {
           </div>
         </div>
         <div
-          className="d-flex justify-content-center flex-wrap mb-5"
+          className="d-flex justify-content-center flex-wrap mb-5 fade-in-animate"
           style={{ marginTop: "-50px" }}
         >
           {data.map((item, indx) => {
