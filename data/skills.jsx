@@ -2,30 +2,45 @@ import { FaHtml5, FaNodeJs, FaReact } from "react-icons/fa/";
 import { DiCss3Full } from "react-icons/di";
 import { IoLogoJavascript } from "react-icons/io";
 import { SiMongodb } from "react-icons/si";
+import { SiExpress } from "react-icons/si";
+import { SiRedux } from "react-icons/si";
+import { TbBrandNextjs } from "react-icons/tb";
 export const SkillsData = [
   {
     name: "HTML",
-    icon: <FaHtml5 style={{ color: "orange" }} />,
+    icon: <FaHtml5 />,
   },
   {
     name: "CSS",
-    icon: <DiCss3Full style={{ color: "white", background: "blue" }} />,
+    icon: <DiCss3Full />,
   },
   {
     name: "Javascript",
-    icon: <IoLogoJavascript style={{ color: "black", background: "yellow" }} />,
+    icon: <IoLogoJavascript />,
   },
   {
     name: "ReactJS",
     icon: <FaReact />,
   },
+  {
+    name: "redux",
+    icon: <SiRedux />,
+  },
+  {
+    name: "NextJs",
+    icon: <TbBrandNextjs />,
+  },
 
   {
     name: "NodeJS",
-    icon: <FaNodeJs style={{ color: "green" }} />,
+    icon: <FaNodeJs />,
+  },
+  {
+    name: "ExposeJS",
+    icon: <SiExpress />,
   },
   {
     name: "MongoDB",
-    icon: <SiMongodb style={{ color: "green" }} />,
+    icon: <SiMongodb />,
   },
 ];

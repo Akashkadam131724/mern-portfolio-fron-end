@@ -1,23 +1,23 @@
 import { FaGithub } from "react-icons/fa";
 import { MdOutlineFileDownload } from "react-icons/md";
 import "../../src/App.css";
+import { SkillsData } from "../../data/skills";
+import SkillCard from "../skills/skill-card";
 
 const Banner = () => {
   const url = import.meta.env.VITE_API_CLIENT_URL;
+  const data = SkillsData;
 
   return (
     <div className="bg-white banner" id="banner">
       <div className="container">
-        <div className="row flex-md-row flex-column-reverse  section section-pad gy-5">
+        <div className="row flex-md-row flex-column-reverse section section-pad gy-4">
           <div className="col-md-6 col-sm-12">
             <div className="d-flex flex-column justify-content-center align-items-start h-100">
               <h4 className="fw-normal mb-0 banner-sub-title animate">
-                Hello, name is
+                Hello, My name is
               </h4>
-              {/* <h4 className="fw-normal mb-0 banner-sub-title animate">
-                Hello,
-                <span>my</span>name is<span>AKASH B. KADAM</span>
-              </h4> */}
+
               <h1 className="banner-title animate-section-title">
                 <span>AKASH B. KADAM</span>
               </h1>
@@ -51,7 +51,14 @@ const Banner = () => {
             />
           </div>
         </div>
-        <div className="border w-50 float-start"></div>
+        <div
+          className="d-flex justify-content-center flex-wrap mb-5"
+          style={{ marginTop: "-50px" }}
+        >
+          {data.map((item, indx) => {
+            return <SkillCard key={indx} skill={item} />;
+          })}
+        </div>
       </div>
     </div>
   );

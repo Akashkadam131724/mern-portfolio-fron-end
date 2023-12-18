@@ -1,64 +1,64 @@
-const projectData = [
-  {
-    imageUrl: "https://source.unsplash.com/1600x900/?web",
-    title: "Card title 1",
-    subtitle: "Subtitle 1",
-    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
-
-    link: "#",
-  },
-  {
-    imageUrl: "https://source.unsplash.com/1600x900/?tech",
-    title: "Card title 2",
-    subtitle: "Subtitle 2",
-    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
-
-    link: "#",
-  },
-  {
-    imageUrl: "https://source.unsplash.com/1600x900/?mob",
-    title: "Card title 3",
-    subtitle: "Subtitle 3",
-    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
-    link: "#",
-  },
-  {
-    imageUrl: "https://source.unsplash.com/1600x900/?game",
-    title: "Card title 3",
-    subtitle: "Subtitle 3",
-    text: "Some quick example text for Card 3. Some quick example text for Card 3.Some quick example text for Card 3.Some quick example text for Card 3.",
-
-    link: "#",
-  },
-  // Add more data as needed
-];
-
-const Card = (props) => {
-  const { imageUrl, title, subtitle, text, link } = props;
-  return (
-    <div className="row my-4  rounded-4 card-hover">
-      <div className="col-3">
-        <img src={imageUrl} className="card-img-top" alt="..." />{" "}
-      </div>
-      <div className="col-9">
-        <div className="card-body">
-          <h5 className="card-title mb-3">{title}</h5>
-          <h6 className="card-subtitle my-2 text-body-secondary">{subtitle}</h6>
-          <p className="card-text">{text}</p>
-        </div>
-      </div>
-    </div>
-  );
-};
+import {
+  VerticalTimeline,
+  VerticalTimelineElement,
+} from "react-vertical-timeline-component";
+import "react-vertical-timeline-component/style.min.css";
+import { FaCode } from "react-icons/fa";
+import { SiFuturelearn } from "react-icons/si";
 
 const About = () => {
   return (
-    <div id="about">
+    <div id="about" className="bg-body-secondary">
       <div className="container section section-pad">
         <h1 className="section-title text-center">My Experience</h1>
-        {projectData.map((project, index) => (
-          <Card key={index} {...project} />
-        ))}
+        <VerticalTimeline>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "#fff",
+              color: "#000",
+              fontFamily: "'Hind Guntur', sans-serif",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  #fff" }}
+            date="2022-2024 - present (2+ years)"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={<FaCode />}
+          >
+            <h3 className="vertical-timeline-element-title">Developer</h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              Noida delhi, India.
+            </h4>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ut libero aperiam corrupti adipisci sed fuga,
+              temporibus doloribus numquam veniam?
+            </p>
+          </VerticalTimelineElement>
+          <VerticalTimelineElement
+            className="vertical-timeline-element--work"
+            contentStyle={{
+              background: "#fff",
+              color: "#000",
+              fontFamily: "'Hind Guntur', sans-serif",
+            }}
+            contentArrowStyle={{ borderRight: "7px solid  #fff" }}
+            date="2021 - 2022 (9 months)"
+            iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
+            icon={<SiFuturelearn />}
+          >
+            <h3 className="vertical-timeline-element-title">
+              Full stack developer,
+            </h3>
+            <h4 className="vertical-timeline-element-subtitle">
+              online bootcamp
+            </h4>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              Aspernatur ut libero aperiam corrupti adipisci sed fuga,
+              temporibus doloribus numquam veniam?
+            </p>
+          </VerticalTimelineElement>
+        </VerticalTimeline>
       </div>
     </div>
   );

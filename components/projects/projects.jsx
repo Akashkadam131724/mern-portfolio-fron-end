@@ -125,11 +125,8 @@ const Projects = () => {
           ))}
         </Slider>
         <div className="text-center mt-5">
-          <button
-            type="button"
-            className="btn btn-lg border border-2 btn-outline-secondary"
-          >
-            + View All Projects
+          <button type="button" className="btn btn-md btn-outline-secondary">
+            +View All Projects
           </button>
         </div>
       </div>

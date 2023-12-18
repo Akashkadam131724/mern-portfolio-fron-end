@@ -3,18 +3,10 @@ import Form from "react-bootstrap/Form";
 
 const ContactForm = () => {
   return (
-    <main id="form" className="bg-body-secondary">
+    <main id="form">
       <div className="container section section-pad">
         <h1 className="section-title text-center">Contact us</h1>
         <div className="row d-flex justify-content-center">
-          <div className="col-sm-12 col-md-6">
-            <img
-              src="https://source.unsplash.com/1600x900/?web"
-              className="img-fluid rounded"
-              alt="Web"
-            />
-          </div>
-
           <div className="col-sm-12 col-md-6">
             <Form className="border p-4 rounded-3 bg-light">
               <Form.Group className="mb-3" controlId="formBasicEmail">

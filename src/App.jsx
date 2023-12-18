@@ -9,16 +9,13 @@ import Footer from "../components/footer/footer";
 import Projects from "../components/projects/projects";
 import ContactForm from "../components/contact-form/contact-form";
 import About from "../components/About/About";
-import Skills from "../components/skills/skills";
 
 function App() {
   return (
     <>
-      {/* #e2e2e2 !important */}
       <Header />
       <Banner />
       <Projects />
-      <Skills />
       <About />
       <ContactForm />
       <Footer />
