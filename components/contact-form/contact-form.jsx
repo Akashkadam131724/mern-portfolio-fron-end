@@ -18,6 +18,8 @@ const ContactForm = () => {
   const [errors, setErrors] = useState({});
 
   const registerUser = async (formData) => {
+    setLoading(true);
+
     let submitData = JSON.stringify({
       ...formData,
       fname: formData.firstName,
@@ -97,7 +99,6 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    setLoading(true);
 
     // Validate form fields
     const formErrors = {};
@@ -234,14 +235,13 @@ const ContactForm = () => {
                   {errors.message}
                 </Form.Control.Feedback>
               </Form.Group>
-
-              <Button
-                variant="secondary"
-                type="submit"
-                className="w-100"
-                disabled={loading}
-              >
-                {loading ? (
+              {console.log(
+                Object.values(errors).every((value) => value === ""),
+                loading
+              )}
+              <Button variant="secondary" type="submit" className="w-100">
+                {loading &&
+                Object.values(errors).every((value) => value === "") ? (
                   <Spinner animation="border" size="sm" role="status" />
                 ) : (
                   "Submit"
