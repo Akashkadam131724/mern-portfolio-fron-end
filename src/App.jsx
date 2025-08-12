@@ -15,6 +15,9 @@ import Spinner from "react-bootstrap/esm/Spinner";
 function App() {
   const [showLoader, setShowLoader] = useState(true);
 
+  //   VITE_API_SERVER = https://mern-portfolio-vsfk.onrender.com
+  // VITE_API_CLIENT_URL = https://akashkadam131724.github.io/mern-portfolio-fron-end/
+
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowLoader(false);
